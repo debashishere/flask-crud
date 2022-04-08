@@ -35,7 +35,7 @@ paths:
       responses:
         '201':
           description: Item Created successfully
-  /item/{id}:
+  /item/{Id}:
     get:
       operationId: item.get
       tags:
@@ -43,7 +43,7 @@ paths:
       summary: Return an Item with given ID
       description: Return an Item with given ID
       parameters:
-        - name: id
+        - name: Id
           in: path
           description: Item ID
           required: true
@@ -64,7 +64,7 @@ paths:
       summary: Delete an Item with given ID
       description: Delete an Item with given ID
       parameters:
-        - name: id
+        - name: Id
           in: path
           description: Item ID
           required: true
@@ -85,7 +85,7 @@ paths:
       summary: Update an Item with given ID
       description: Update an Item with given ID
       parameters:
-        - name: id
+        - name: Id
           in: path
           description: Item ID
           required: true
@@ -110,10 +110,21 @@ components:
     Item:
       type: object
       properties:
-        id:
+        Id:
           type: integer
           format: int64
-        name:
+        Checked:
+          type: boolean
+        Name:
           type: string
-        price:
-          type: number
+        Type:
+          type: string
+        Age:
+          type: integer
+          format: int64
+        Description:
+          type: string
+          format: int64
+        Date:
+          type: string
+          format: date

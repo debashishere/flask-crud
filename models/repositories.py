@@ -9,14 +9,14 @@ class ItemRepo:
     db.session.add(item)
     db.session.commit()
     
- def fetchById(self,_id)-> 'Item':
-     return db.session.query(Item).filter_by(id=_id).first()
+ def fetchById(self,_Id)-> 'Item':
+     return db.session.query(Item).filter_by(Id=_Id).first()
  
  def fetchAll(self) -> List['Item']:
      return db.session.query(Item).all()
  
- def delete(self,_id) -> None:
-     item= db.session.query(Item).filter_by(id=_id).first()
+ def delete(self,_Id) -> None:
+     item= db.session.query(Item).filter_by(Id=_Id).first()
      db.session.delete(item)
      db.session.commit()
      
